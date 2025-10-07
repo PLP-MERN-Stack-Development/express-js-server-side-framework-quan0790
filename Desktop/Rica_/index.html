@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RICA+ — Home</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-rOA1PnstxnOBLzCLhXlL+VSKDFZsHqep0R+2Xj5p+F4qDh1C9IhU7E+2I1D9m+K5hK5C0ZxrVhCj3C5ZklYkMw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script defer src="script.js"></script>
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <div class="brand"><div class="logo">RICA+</div><div><small style="opacity:.9">Foods & Drinks</small></div></div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-ghost wa-link" data-msg="Hi RICA+! I have a question about bookings.">WhatsApp</button>
+      <button class="btn btn-primary open-reserve">Reserve</button>
+      <div class="burger" aria-hidden="true"><div></div><div></div><div></div></div>
+    </div>
+  </div>
+  <div class="container mobile-menu hidden">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+<!-- Reservation Form Modal -->
+<div id="reserveModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Reserve Your Spot</h2>
+    <form id="reserveForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="people">Number of People:</label>
+      <input type="number" id="people" name="people" min="1" required>
+
+      <button type="submit">Submit Reservation</button>
+    </form>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-left reveal">
+      <div class="kicker">A Delicious Restaurant</div>
+      <h1 class="title">Making Delicious<br><span style="font-style:italic;font-weight:800">Premium Food</span></h1>
+      <p class="subtitle">Seasonal tasting menus, crafted cocktails and warm hospitality. Book a table for an unforgettable evening.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary open-reserve">Reserve</button>
+        <button class="btn btn-ghost wa-link" data-msg="Hello, I'd like to reserve a table.">WhatsApp</button>
+      </div>
+    </div>
+    <div class="hero-right reveal">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=6f9bd7e5c6d0d1f2a5b9d5b8e3c5f0a7" alt="Hero food image">
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <section class="section center reveal">
+    <h2>Menu Highlights</h2>
+    <p class="subtitle">Chef-curated favourites</p>
+    <div class="grid menu-grid" style="margin-top:20px">
+      <div class="card reveal"><img src="assets/pexels-brettjordan-825661.jpg" alt="pizza" style="width:100%;height:160px;object-fit:cover;border-radius:8px"><h3>Wood-fired Pizza</h3><p class="muted">Tomato, mozzarella, basil</p><div class="price">KSh 1,200</div></div>
+      <div class="card reveal"><img src="assets/pexels-pixelme-stock-photography-1435416-2773940.jpg" alt="pasta" style="width:100%;height:160px;object-fit:cover;border-radius:8px"><h3>Truffle Pasta</h3><p class="muted">Cream, parmesan, truffle oil</p><div class="price">KSh 1,800</div></div>
+      <div class="card reveal"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=bbbb1111bbbb1111bbbb1111bbbb1111" alt="burger" style="width:100%;height:160px;object-fit:cover;border-radius:8px"><h3>Signature Burger</h3><p class="muted">Beef, cheddar, caramelized onion</p><div class="price">KSh 1,000</div></div>
+      <div class="card reveal"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=cccc2222cccc2222cccc2222cccc2222" alt="salad" style="width:100%;height:160px;object-fit:cover;border-radius:8px"><h3>Seasonal Salad</h3><p class="muted">Greens, seeds, citrus dressing</p><div class="price">KSh 750</div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 RICA+ • All Rights Reserved</p>
+   
+</footer>
+
+
+<!-- reserve modal included in all pages via JS-created element -->
+<div id="reserveModal" class="modal" style="display:none"></div>
+</body>
+</html>
